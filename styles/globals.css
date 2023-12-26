@@ -21,7 +21,8 @@ h6,
 p,
 ul,
 ol,
-li {
+li,
+button {
   margin: 0;
   padding: 0;
 }
@@ -35,6 +36,11 @@ input {
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
+  cursor: pointer;
+}
+button:focus,
+input:focus {
+  outline: none;
 }
 
 ul,
@@ -44,10 +50,10 @@ ol {
 
 .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
 }

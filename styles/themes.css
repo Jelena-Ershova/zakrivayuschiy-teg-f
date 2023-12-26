@@ -4,3 +4,90 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+:root.theme-dark {
+  --bg-color: #000;
+  --text-color: #00cc14;
+  --text-shadow: #00cc14;
+  --gr-color: #000;
+  --gr-color-medium: #007f0c;
+  --gr-color-dark: #004306;
+  --font-base-weight-card: 465;
+  --font-base-weight-card-title: 785;
+}
+
+:root.theme-light {
+  --bg-color: #fff;
+  --text-color: #000;
+  --text-shadow: #fff;
+  --gr-color: #d3d3d3;
+  --gr-color-medium: #e7e7e7;
+  --gr-color-dark: #1a1a1a;
+  --font-base: "Inter Variable", Helvetica, sans-serif;
+  --font-accent: "Press Start 2P", Tahoma, sans-serif;
+  --font-size-base: 14px;
+  --font-base-weight-card: 400;
+  --font-base-weight-card-title: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #000;
+    --text-color: #00cc14;
+    --text-shadow: #00cc14;
+    --gr-color: #000;
+    --gr-color-medium: #007f0c;
+    --gr-color-dark: #004306;
+    --font-base-weight-card: 465;
+    --font-base-weight-card-title: 785;
+  }
+  .theme-dark .page {
+    background-image: repeating-linear-gradient(
+        90deg,
+        var(--gr-color) 0 2px,
+        transparent 2px 4px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        var(--gr-color) 0 2px,
+        transparent 2px 4px
+      ),
+      linear-gradient(
+        to bottom,
+        var(--gr-color-medium) 0%,
+        var(--gr-color-dark) 100%
+      );
+  }
+}
+
+.page {
+  background-image: repeating-linear-gradient(
+      90deg,
+      var(--gr-color) 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(0deg, var(--gr-color) 0 2px, transparent 2px 4px),
+    linear-gradient(
+      to bottom,
+      var(--gr-color-medium) 0%,
+      var(--gr-color-medium) 0.01%,
+      var(--gr-color-dark) 100%
+    );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.theme-dark .page {
+  background-image: repeating-linear-gradient(
+      90deg,
+      var(--gr-color) 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(0deg, var(--gr-color) 0 2px, transparent 2px 4px),
+    linear-gradient(
+      to bottom,
+      var(--gr-color-medium) 0%,
+      var(--gr-color-dark) 100%
+    );
+}
