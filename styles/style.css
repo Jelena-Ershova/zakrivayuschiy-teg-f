@@ -247,14 +247,10 @@
   outline: none;
 }
 
-.main_section_mytext-link:focus-visible {
+.main_section_mytext-link:focus-visible,
+.details:focus-visible {
   outline: none;
   text-decoration: underline;
-}
-
-.details:focus-visible {
-  outline: 1px solid var(--text-color);
-  outline-offset: 2px;
 }
 
 .details:hover {
@@ -275,7 +271,7 @@
 }
 
 .main__section_like-button {
-  border: none; 
+  border: none;
   border-radius: 0;
   background: none;
 }
