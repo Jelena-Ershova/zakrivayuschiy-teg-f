@@ -242,6 +242,21 @@
   text-decoration: underline;
 }
 
+.main_section_mytext-link:focus,
+.details:focus {
+  outline: none;
+}
+
+.main_section_mytext-link:focus-visible {
+  outline: none;
+  text-decoration: underline;
+}
+
+.details:focus-visible {
+  outline: 1px solid var(--text-color);
+  outline-offset: 2px;
+}
+
 .details:hover {
   cursor: pointer;
   filter:hue-rotate(140deg);
@@ -260,12 +275,16 @@
 }
 
 .main__section_like-button {
-  border: 2px solid transparent;
+  border: none; 
   border-radius: 0;
   background: none;
 }
 
-.main__section_like-button:focus-visible {
+.like-icon {
+  border: 2px solid transparent;
+}
+
+.main__section_like-button:focus-visible .like-icon {
   border-color: var(--text-color);
   transition: 0.3s ease;
 }
